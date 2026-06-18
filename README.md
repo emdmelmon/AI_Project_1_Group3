@@ -2,17 +2,17 @@
 ## ABIDE 데이터셋 기반 자페 스펙트럼 장애 - Autism Spectrum Disorder (ASD) 분류
 - 팀원 : 엘몬, 정인호, 양다윗
 ## 1. Project 소개
-1-1.  **자페 스펙트럼 장애 - Autism Spectrum Disorder (ASD) 란?**
+**a)  자페 스펙트럼 장애 - Autism Spectrum Disorder (ASD) 란?**
 - 뇌 영역 간의 기능적 과잉 연결(Functional Over-connectivity) 또는 저연결(Functional Under-connectivity)로 인해 발생하는 장애.
 - *진단의 필요성*: 
 정확한 진단을 위해 뇌의 특정 활동 패턴을 식별하는 객관적 지표가 필요함.
 
-1-2. **참고 논문**
+**b) 참고 논문**
 - *Topological turning points across the human lifespan, Mousley, et al.*
 - 뇌의 구조적 연결성(Structural Connectivity - SC)은 32세에 완벽화되어 성인 뇌가 된다.
 - 이 논문을 바탕으로 가설을 새월 뇌영역간의 기능적 변화화 구조적 변화의 연결성을 관찰하려고 했다.
 
- 1-3. **가설** 
+ **c) 가설** 
 
    - (a) 32세 이상인 자폐 환자의 뇌기능적 연결성(FC)은 계속 증가하지만 뇌구조적 연결성(SC)은 줄어든다.
    - (b) 32세 이하인 정상인의 뇌구조적 연결성(SC)은 증가하지만 뇌기능적 연결성(FC)은 약해진다.
