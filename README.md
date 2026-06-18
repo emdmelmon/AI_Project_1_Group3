@@ -87,6 +87,6 @@
 <img width="558" height="132" alt="image" src="https://github.com/user-attachments/assets/b54f75e5-7a47-4de3-98d0-fbbab8315ff3" />
 
 ## 7. 결론 및 추후 계획
-- Model performance 의 원인 fMRI data 전처리(Brain Parcellation)방법 AAL, CC200, Schaefer 및 100, 200, 400 등 Parcellation 을 다양하게 해보고 적절한 Atlas석택이 필요.
+- Model performance 의 원인 fMRI data 전처리 (Brain Atlas Parcellation)방법 AAL, CC, Schaefer 를 100, 200, 400 등 다양하게 해보고 적절한 Atlas석택이 필요.
 - 데이터 특성상 18세로 나누었지만 실제로 32세로 나눌 수있게 맞는 데이터 추가 필요.
 - Cross-Atlas Fusion 외에 Self-supervised Learning 등 더 다양한 학습방법과 model을 시도할 필요.
