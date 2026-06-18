@@ -28,7 +28,63 @@
 
 ## 제안 방법
 - Graph-based Deep Learning Model 기반 자폐 스펙트럼 장애를 32세 이하/이상 2개의 나이 그룹별로 분류한 결과를 Grad-Cam을 사용해 설명.
-1. 초안 제안 방법 : A-GCN model
 
-2. 바꾼 제안 방법 : Cross-Atlas Fusion Model
+**a) 초안 제안 방법 : A-GCN model**
 
+**System Pipeline**
+<img width="1184" height="729" alt="image" src="https://github.com/user-attachments/assets/4a951ba0-7150-4e19-a6a7-8da9f697861b" />
+
+ b) 바꾼 제안 방법 : Cross-Atlas Fusion Model
+ - 7 Models : GCN, GIN, GAT, TransformerGNN, ChebConv GCN, Graph SAGE, BrainNetCNN
+ - 3 Atlases : AAL-116, CC-200, Schaefer-200
+ - 3 Age Groups : All, 청소년 (<18), 성인 (>18)
+    *[ 데이터셋의 나이분포와 맞게 18세로 나누었음. 추후에 데이터셋 추가해 32세로 바꾼 예전 ]*
+
+## Libraries 
+- python, pytorch, nilearn
+  
+## 데이터 확인 (EDA)
+- fMRI .nii file
+  
+  <img width="365" height="264" alt="image" src="https://github.com/user-attachments/assets/d2168bc3-4e9e-4e10-bb3e-879e098a7425" />
+  
+  <img width="394" height="386" alt="image" src="https://github.com/user-attachments/assets/1122b0ae-f6a8-428f-9f76-845ab1882af4" />
+
+
+- 나이분포 :
+
+  <img width="346" height="239" alt="image" src="https://github.com/user-attachments/assets/da983be2-186f-4ad4-be6d-6b49733748d8" />
+
+- 성별분포
+   light pink - Male,
+   pink - Female
+   
+   <img width="366" height="263" alt="image" src="https://github.com/user-attachments/assets/e2f7690a-f9bf-4829-a2c0-2ab48b5ef2c5" />
+
+- 전처리 (Brain Parcellation) 후 .pt file 확인 및 시각화
+  
+   <img width="1517" height="646" alt="image" src="https://github.com/user-attachments/assets/0607d989-ce55-45f3-b93e-1c4372200914" />
+   <img width="573" height="310" alt="image" src="https://github.com/user-attachments/assets/fb49ac3a-0c39-47fd-8e27-14264713d0e3" />
+
+
+## Models and Performance
+- Baseline Models
+
+<img width="1390" height="680" alt="image" src="https://github.com/user-attachments/assets/b0226809-ff3d-47f1-a6b5-fec617c404da" />
+
+- Model Comparison
+
+<img width="2228" height="771" alt="model_comparison_plot" src="https://github.com/user-attachments/assets/da462b44-2b00-4f57-8178-e58e0f718553" />
+
+- 나이별 최적 모델
+
+<img width="1324" height="791" alt="image" src="https://github.com/user-attachments/assets/a7590beb-c94f-4451-9eb1-8114618f6c15" />
+
+- Cross-Atlas Fusion Model
+
+<img width="558" height="132" alt="image" src="https://github.com/user-attachments/assets/b54f75e5-7a47-4de3-98d0-fbbab8315ff3" />
+
+## 결론 및 추후 계획
+- Model performance 의 원인 fMRI data 전처리(Brain Parcellation)방법 AAL, CC200, Schaefer 및 100, 200, 400 등 Parcellation 을 다양하게 해보고 적절한 Atlas석택이 필요.
+- 데이터 특성상 18세로 나누었지만 실제로 32세로 나눌 수있게 맞는 데이터 추가 필요.
+- Cross-Atlas Fusion 외에 Self-supervised Learning 등 더 다양한 학습방법과 model을 시도할 필요.
